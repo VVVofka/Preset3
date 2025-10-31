@@ -1,7 +1,68 @@
 {
-	"version": "2.0.0",
-	"tasks": [
-		{
-		}
-	]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build-debug",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build",
+        "${workspaceFolder}/out/build/debug",
+        "--config",
+        "Debug"
+      ],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": "$gcc"
+    },
+    {
+      "label": "build-release",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build",
+        "${workspaceFolder}/out/build/release",
+        "--config",
+        "Release"
+      ],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": "$gcc"
+    },
+    {
+      "label": "build-testing",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build",
+        "${workspaceFolder}/out/build/testing",
+        "--config",
+        "RelWithDebInfo"
+      ],
+      "group": "build",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false
+      },
+      "problemMatcher": "$gcc"
+    }
+  ]
 }
