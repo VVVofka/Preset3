@@ -3,62 +3,38 @@
   "configurations": [
     {
       "name": "Debug",
-      "type": "cppdbg",
+      "type": "cppvsdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/out/build/debug/${workspaceFolderBasename}",
+      "program": "${workspaceFolder}/out/Debug/${workspaceFolderBasename}.exe",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
       "environment": [],
-      "externalConsole": false,
-      "MIMode": "gdb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ],
+      "console": "externalTerminal",
       "preLaunchTask": "build-debug"
     },
     {
       "name": "Release",
-      "type": "cppdbg",
+      "type": "cppvsdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/out/build/release/${workspaceFolderBasename}",
+      "program": "${workspaceFolder}/out/Release/${workspaceFolderBasename}.exe",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
       "environment": [],
-      "externalConsole": false,
-      "MIMode": "gdb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ],
+      "console": "externalTerminal",
       "preLaunchTask": "build-release"
     },
     {
       "name": "Testing",
-      "type": "cppdbg",
+      "type": "cppvsdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/out/build/testing/${workspaceFolderBasename}",
+      "program": "${workspaceFolder}/out/Testing/${workspaceFolderBasename}.exe",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
       "environment": [],
-      "externalConsole": false,
-      "MIMode": "gdb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ],
+      "console": "externalTerminal",
       "preLaunchTask": "build-testing"
     }
   ]
